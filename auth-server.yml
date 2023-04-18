@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://lemur-4.cloud-iam.com/realms/kingmenu-auth-server
+          issuer-uri: https://lemur-4.cloud-iam.com/auth/realms/kingmenu-auth-server
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
 
 jwt:
