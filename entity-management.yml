@@ -1,0 +1,6 @@
+spring.data.mongodb.database=entity
+spring.data.mongodb.uri=mongodb://luizcardoso:rca1995@cluster0-shard-00-00.e7mjo.mongodb.net:27017,cluster0-shard-00-01.e7mjo.mongodb.net:27017,cluster0-shard-00-02.e7mjo.mongodb.net:27017/test?replicaSet=atlas-pdlssx-shard-0&ssl=true&authSource=admin
+authserver.hostname=http://localhost:9092
+authserver.security.oauth2.resource.userInfoUri=${authserver.hostname}/api/auth/user
+authserver.security.oauth2.resource.id=entity-management
+server.port=8081
