@@ -1,24 +1,19 @@
 server:
+  servlet:
+    context-path: /api
   port: 9092
-
-eureka:
-  instance:
-    hostname: localhost
-    port: 9091
-  client:
-    registerWithEureka: true
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
-
-security:
+  
+spring:
+  security:
     oauth2:
-        client:
-            access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
-            client-id: kingmenu
-            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
-            resource-ids: resources
-            scope: read,write
+      resourceserver:
+        jwt:
+          issuer-uri: https://lemur-4.cloud-iam.com/auth/realms/kingmenu-auth-server
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+          
+jwt:
+  auth:
+    converter:
+      resource-id: kingmenu-client
+      principal-attribute: preferred_username
+      
