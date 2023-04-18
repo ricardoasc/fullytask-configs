@@ -16,3 +16,9 @@ authserver:
       resource:
         id: ${spring.application.name}
         userInfoUri: ${authserver.hostname}/api/auth/token
+
+jwt:
+  auth:
+    converter:
+      resource-id: kingmenu-client
+      principal-attribute: preferred_username
