@@ -6,9 +6,10 @@ eureka:
   server:
     enableSelfPreservation: false
   instance:
-    hostname: localhost
+    hostname: fullytask-eureka-server.sa-east-1.elasticbeanstalk.com
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}/eureka/
