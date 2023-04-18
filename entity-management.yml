@@ -26,7 +26,7 @@ jwt:
 eureka:
   instance:
     hostname: localhost
-    port: 9999
+    port: 8761
   client:
     registerWithEureka: true
     fetchRegistry: false
